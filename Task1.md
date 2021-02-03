@@ -307,7 +307,7 @@ Test loss: 1.965910632861778e-05
 ```
 ### Task 1.3 - Evaluate
 
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
+
 
 Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based on the the prediction accuracy on the test dataset and the number of trainable parameters. 
 
@@ -318,4 +318,8 @@ Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based
 | Mtrig         | 9.84e-02            |   301,442 |
 | Mcnn          | 2.68e-03            |    11,714 |
 
-The model.summary() function prints useful information about the model to the terminal. Which model would you prefer and why? Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+The model.summary() function prints useful information about the model to the terminal. 
+- Which model would you prefer and why? 
+- Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
+- Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
