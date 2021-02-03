@@ -105,6 +105,7 @@ model = tf.keras.Sequential( #irene
 
     """TASK 1.1: END"""
 ```
+### Task 1.1 - Run
 
 Run the code by using the command `python train.py`:
 ```shell
@@ -153,12 +154,26 @@ _________________________________________________________________
 75/75 - 0s - loss: 5.9486
 Test loss: 5.9486284255981445
 ```
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="700">
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="700">
 
-Average predicion error $2.33$
-<img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
-<img src="https://render.githubusercontent.com/render/math?math=\pi">
+
+Task 1.1  Average predicion error: <img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
+
+### Task 1.1 - Evaluate
+
+- Where does the model have the lowest accuracy? 
+    The lowest accuracy is found on both ends of the plot which represent a greater angle travelled by the angle. 
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
+- What could be an explanation for the loss of accuracy in that region? 
+    As it can be seen in the following picture, most of the angles are found around pi or -pi. The pendulum does not get to visit regions far from that angle. Therefore, the accurary gets lower and lower for regions farther from the ones the pendulum visits the most. 
+
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
+- Also, report the mean and standard deviation of the “average prediction error” stated in the plot’s title over multiple runs
+    Average predicion error: <img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
+    ❎ Mean
+    ❎ standard deviation
+- In general, a separate test dataset is used to evaluate a trained model, why?
+    ❎
+
 ## Task 1.2
 
 
