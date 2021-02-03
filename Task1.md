@@ -171,8 +171,18 @@ Task 1.1  Average predicion error: <img src="https://render.githubusercontent.co
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
 - Also, report the mean and standard deviation of the “average prediction error” stated in the plot’s title over multiple runs
     Average predicion error: <img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
-    ❎ Mean
-    ❎ standard deviation
+    In order to obtain the mean and the standard deviation, I printed the following values on the terminal and used them on Excel:
+    
+    ```python
+    print(bin_means) # Y axis
+    print(bins) # X axis
+    ```
+    
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_theta_std_mean.png" width="500">
+    
+    Mean = 1.57 
+    Standard deviation = 0.93
+    
 - In general, a separate test dataset is used to evaluate a trained model, why?
     ❎
 
