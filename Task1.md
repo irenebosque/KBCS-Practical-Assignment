@@ -255,6 +255,10 @@ Test loss: 0.010128799825906754
 - Why does indirectly predicting the angle improve the prediction accuracy? 
 - Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle? 
 - Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
+    
+    Mean = 1.57 
+    Standard deviation = 0.93
 
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/gif_task-1-2.gif" width="500">
