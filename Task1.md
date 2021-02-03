@@ -105,7 +105,36 @@ model = tf.keras.Sequential( #irene
 
     """TASK 1.1: END"""
 ```
-    
+
+Run the code by using the command `python train.py`:
+```shell
+(kbcs) irene@irene-computer:~/Dropbox/KBCS-Practical Assignment/KBCS-assignment-main$ python train.py
+Loaded observation data: (12120, 28, 28, 3)
+Loaded state data: (12120, 2)
+Epoch 1/30
+120/120 [==============================] - 1s 6ms/step - loss: 6.4024 - val_loss: 4.1779
+Epoch 2/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0391 - val_loss: 4.1778
+Epoch 3/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0389 - val_loss: 4.1777
+.
+.
+.
+.
+.
+Epoch 27/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0385 - val_loss: 4.1779
+Epoch 28/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0384 - val_loss: 4.1779
+Epoch 29/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0384 - val_loss: 4.1779
+Epoch 30/30
+120/120 [==============================] - 1s 5ms/step - loss: 5.0385 - val_loss: 4.1778
+
+
+```
+ 
+You should see in the terminal a summary of the model:
 ```
 Model: "model_theta"
 _________________________________________________________________
@@ -124,7 +153,12 @@ _________________________________________________________________
 75/75 - 0s - loss: 5.9486
 Test loss: 5.9486284255981445
 ```
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="700">
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="700">
 
+Average predicion error $2.33$
+<img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
+<img src="https://render.githubusercontent.com/render/math?math=\pi">
 ## Task 1.2
 
 
