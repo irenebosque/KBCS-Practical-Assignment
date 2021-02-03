@@ -179,9 +179,84 @@ Task 1.1  Average predicion error: <img src="https://render.githubusercontent.co
 ## Task 1.2
 
 
+### Task 1.2 - Create
+
+The sequential *model_trig* can be created in one of the two following ways, like this...:
+
+```python
+
+model = tf.keras.Sequential(name="model_trig")
+model.add(tf.keras.layers.Flatten())
+model.add(tf.keras.layers.Dense(128, activation="relu", name="dense_layer_128"))
+model.add(tf.keras.layers.Dense(2, name="dense_layer_2"))
+```
+... or like this:
+
+```python
+model = tf.keras.Sequential( 
+    [
+        tf.keras.layers.Flatten(),
+        tf.keras.layers.Dense(128, activation="relu", name="dense_layer_128"),
+        tf.keras.layers.Dense(2, name="dense_layer_2"),
+    ]
+)
+```
+
+
+### Task 1.2 - Train
+```python
+    """TASK 1.2: TRAIN MODEL HERE"""
+
+    model.fit(
+        x=train_obs,
+        y=train_trig,
+        batch_size=64,
+        epochs=30,
+        validation_split=0.2)
+
+    model.summary() # This will print a summary of the model in the terminal
+
+
+    """TASK 1.1: END"""
+```
+### Task 1.2 - Run
+
+```
+Model: "model_trig"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (64, 2352)                0         
+_________________________________________________________________
+dense_layer_128 (Dense)      (64, 128)                 301184    
+_________________________________________________________________
+dense_layer_2 (Dense)        (64, 2)                   258       
+=================================================================
+Total params: 301,442
+Trainable params: 301,442
+Non-trainable params: 0
+_________________________________________________________________
+75/75 - 0s - loss: 0.0101
+Test loss: 0.010128799825906754
+```
+### Task 1.2 - Evaluate
+
+- Compare the average prediction error per bin and compare with the plot for Mθ. 
+- Why does indirectly predicting the angle improve the prediction accuracy? 
+- Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle? 
+- Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/gif_task-1-2.gif" width="500">
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
+
 
 ## Task 1.3
-## Task 1.4
+
+
+
+### Task 1.2 - Create
+
 
 The sequential *model_cnn* can be created in one of the two following ways, like this...:
 
@@ -208,7 +283,7 @@ model = tf.keras.Sequential(
 
 
     
-
+### Task 1.3 - Run
 ```
 Model: "model_cnn"
 _________________________________________________________________
@@ -230,3 +305,17 @@ _________________________________________________________________
 Test loss: 1.965910632861778e-05
 
 ```
+### Task 1.3 - Evaluate
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
+
+Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based on the the prediction accuracy on the test dataset and the number of trainable parameters. 
+
+
+| Tables        | Prediction accuracy | Trainable parameters  |
+| ------------- |:-------------:      | -----:|
+| Mθ            | 2.33e+00            | 301,313   |
+| Mtrig         | 9.84e-02            |   301,442 |
+| Mcnn          | 2.68e-03            |    11,714 |
+
+The model.summary() function prints useful information about the model to the terminal. Which model would you prefer and why? Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
