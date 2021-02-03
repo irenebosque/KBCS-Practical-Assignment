@@ -1,12 +1,40 @@
-> 💡
+
 
 ## Installation procedure
+> 💡 The folder I download with the files it is called *KBCS-assignment-main* and not *KBCS-assignment* as indicated in the `README.md` file.
+
+I followed this tutorial for installing anaconda on Ubuntu **20.04**: https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/
+
+⚠️ Important once you finish following the instructions on the tutorial, close and open a new terminal as it is indicated at the end of the tutorial.
+
+
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/Installation_procedure_1.png" width="700">
+
+Once it is installed, you will see a message on your terminal telling you how to activate the virtual environment:
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/Installation_procedure_2.png" width="700">
+Go and activate the virtual environment: 
+
+
+```bash
+
+conda activate kbcs
+
+```
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/Installation_procedure_3.png" width="700">
+
+Once inside the virtual environment, (*Note: you are inside the virtual environment if you see (kbcs) in front of the terminal line*), run if you wish the file `generate_data.py`, it takes some time:
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/generate_data_1.png" width="700">
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/generate_data_2.png" width="700">
+
+
 
 In REAME.md, line 11, add what you mean by move into that directory. Example cd ..
 Line 27 Readme should be: irene@irene-computer:~/Dropbox/KBCS-Practical Assignment/KBCS-assignment-main$  Important: The folder is called KBCS-assignment
 
-Tutorial for anaconda in Ubuntu 20.04: https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/
-Important once you finish fllowing the instructions on how to install anaconda, close and open a new terminal!
 
 Maybe include a picture of the angles of the pendulum or a more detailed description like, from upright position, going right that means positive pi...
 
@@ -31,6 +59,9 @@ CNN
 
 ## Task 1.1
 ## Task 1.2
+
+
+
 ## Task 1.3
 ## Task 1.4
 
