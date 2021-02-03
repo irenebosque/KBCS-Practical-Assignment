@@ -161,8 +161,10 @@ Task 1.1  Average predicion error: <img src="https://render.githubusercontent.co
 ### Task 1.1 - Evaluate
 
 - Where does the model have the lowest accuracy? 
-    The lowest accuracy is found on both ends of the plot which represent a greater angle travelled by the angle. 
+    The lowest accuracy is found on both ends of the plot which represent a greater angles travelled by the pendulum. 
+    
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
+    
 - What could be an explanation for the loss of accuracy in that region? 
     As it can be seen in the following picture, most of the angles are found around pi or -pi. The pendulum does not get to visit regions far from that angle. Therefore, the accurary gets lower and lower for regions farther from the ones the pendulum visits the most. 
 
