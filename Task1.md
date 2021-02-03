@@ -170,7 +170,7 @@ Task 1.1  Average predicion error: <img src="https://render.githubusercontent.co
 
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
 - Also, report the mean and standard deviation of the “average prediction error” stated in the plot’s title over multiple runs
-    Average predicion error: <img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
+    Average predicion error: 2.33e+00
     In order to obtain the mean and the standard deviation, I printed the following values on the terminal and used them on Excel:
     
     ```python
@@ -180,8 +180,8 @@ Task 1.1  Average predicion error: <img src="https://render.githubusercontent.co
     
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_theta_std_mean.png" width="500">
     
-    Mean = 1.57 
-    Standard deviation = 0.93
+    - Mean = 1.57 
+    - Standard deviation = 0.93
     
 - In general, a separate test dataset is used to evaluate a trained model, why?
     ❎
@@ -251,25 +251,34 @@ Test loss: 0.010128799825906754
 ```
 ### Task 1.2 - Evaluate
 
-- Compare the average prediction error per bin and compare with the plot for Mθ. 
+- Compare the average prediction error per bin and compare with the plot for Mθ.
+
+| Model         | Average prediction error |
+| ------------- |:-------------:      |
+| Mθ            | 2.33e+00            | 
+| Mtrig         | 4.33e-02            |   
+
+
+
 - Why does indirectly predicting the angle improve the prediction accuracy? 
 - Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle? 
 - Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
     
-    Mean = 1.57 
-    Standard deviation = 0.93
+    - Mean = 0.04
+    - Standard deviation = 0.022
 
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/gif_task-1-2.gif" width="500">
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
+
 
 
 ## Task 1.3
 
 
 
-### Task 1.2 - Create
+### Task 1.3 - Create
 
 
 The sequential *model_cnn* can be created in one of the two following ways, like this...:
@@ -326,14 +335,18 @@ Test loss: 1.965910632861778e-05
 Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based on the the prediction accuracy on the test dataset and the number of trainable parameters. 
 
 
-| Tables        | Prediction accuracy | Trainable parameters  |
+| Model   | Prediction accuracy | Trainable parameters  |
 | ------------- |:-------------:      | -----:|
 | Mθ            | 2.33e+00            | 301,313   |
-| Mtrig         | 9.84e-02            |   301,442 |
-| Mcnn          | 2.68e-03            |    11,714 |
+| Mtrig         | 4.33e-02            |   301,442 |
+| Mcnn          | 4.74e-03            |    11,714 |
 
 The model.summary() function prints useful information about the model to the terminal. 
 - Which model would you prefer and why? 
 - Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
 - Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_cnn_std_mean.png" width="500">
+    
+    - Mean = 0.002
+    - Standard deviation = 0.0046
