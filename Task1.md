@@ -32,6 +32,9 @@ Once inside the virtual environment, (*Note: you are inside the virtual environm
 
 
 
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/radians.png" width="200">
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/circle_20.jpg" width="200">
+
 In REAME.md, line 11, add what you mean by move into that directory. Example cd ..
 Line 27 Readme should be: irene@irene-computer:~/Dropbox/KBCS-Practical Assignment/KBCS-assignment-main$  Important: The folder is called KBCS-assignment
 
@@ -58,6 +61,70 @@ CNN
 
 
 ## Task 1.1
+
+
+### Task 1.1 - Create
+
+The sequential *model_theta* can be created in one of the two following ways, like this...:
+
+```python
+
+model = tf.keras.Sequential(name="model_theta")
+model.add(tf.keras.layers.Flatten())
+model.add(tf.keras.layers.Dense(128, activation="relu", name="dense_layer_128"))
+model.add(tf.keras.layers.Dense(1, name="dense_layer_1"))
+```
+... or like this:
+
+```python
+model = tf.keras.Sequential( #irene
+    [
+        tf.keras.layers.Flatten(),
+        tf.keras.layers.Dense(128, activation="relu", name="dense_layer_128"),
+        tf.keras.layers.Dense(1, name="dense_layer_1"),
+    ]
+)
+```
+### Task 1.1 - Compile
+> 💡 It was intentional to already include how to compile the model?
+
+
+### Task 1.1 - Train
+```python
+    """TASK 1.1: TRAIN MODEL HERE"""
+
+    model.fit(
+        x=train_obs,
+        y=train_theta,
+        batch_size=64,
+        epochs=30,
+        validation_split=0.2)
+
+    model.summary() # This will print a summary of the model in the terminal
+
+
+    """TASK 1.1: END"""
+```
+    
+```
+Model: "model_theta"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (64, 2352)                0         
+_________________________________________________________________
+dense_layer_128 (Dense)      (64, 128)                 301184    
+_________________________________________________________________
+dense_layer_1 (Dense)        (64, 1)                   129       
+=================================================================
+Total params: 301,313
+Trainable params: 301,313
+Non-trainable params: 0
+_________________________________________________________________
+75/75 - 0s - loss: 5.9486
+Test loss: 5.9486284255981445
+```
+
 ## Task 1.2
 
 
@@ -65,7 +132,31 @@ CNN
 ## Task 1.3
 ## Task 1.4
 
+The sequential *model_cnn* can be created in one of the two following ways, like this...:
 
+```python
+model = tf.keras.Sequential(name="model_cnn")
+model.add(tf.keras.layers.Conv2D(32, 3, activation="relu"))
+model.add(tf.keras.layers.MaxPool2D(pool_size=(2, 2)))
+model.add(tf.keras.layers.Flatten())
+model.add(tf.keras.layers.Dense(2, name="dense_layer_2"))
+```
+... or like this:
+
+```python
+model = tf.keras.Sequential(
+    [
+        tf.keras.layers.Conv2D(32, 3, activation="relu"),
+        tf.keras.layers.MaxPool2D(pool_size=(2, 2)),
+        tf.keras.layers.Flatten(),
+        tf.keras.layers.Dense(2, name="dense_layer_2"),
+    ]
+)
+```
+
+
+
+    
 
 ```
 Model: "model_cnn"
