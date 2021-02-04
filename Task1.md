@@ -286,6 +286,8 @@ Test loss: 0.010128799825906754
   ⁉️ (not sure)
 
 - Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
+
+    Figures for the first run:
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
     
@@ -305,14 +307,14 @@ Test loss: 0.010128799825906754
   <tr>
     <td class="tg-c3ow">mean</td>
     <td class="tg-c3ow" colspan="2">0.04</td>
-    <td class="tg-c3ow" colspan="2">mean2</td>
+    <td class="tg-c3ow" colspan="2">0.076</td>
     <td class="tg-c3ow" colspan="2">mean3<br></td>
     <td class="tg-c3ow" colspan="2">mean4</td>
   </tr>
   <tr>
     <td class="tg-c3ow">std<br></td>
     <td class="tg-c3ow" colspan="2">0.022</td>
-    <td class="tg-c3ow" colspan="2">std2</td>
+    <td class="tg-c3ow" colspan="2">0.037</td>
     <td class="tg-c3ow" colspan="2">std3</td>
     <td class="tg-c3ow" colspan="2">std4</td>
   </tr>
@@ -391,6 +393,8 @@ The model.summary() function prints useful information about the model to the te
 - Which model would you prefer and why? 
 - Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
 - Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
+    
+    Figures for the first run:
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_cnn_std_mean.png" width="500">
     
@@ -409,17 +413,17 @@ The model.summary() function prints useful information about the model to the te
 <tbody>
   <tr>
     <td class="tg-c3ow">mean</td>
-    <td class="tg-c3ow" colspan="2">0.002</td>
-    <td class="tg-c3ow" colspan="2">mean2</td>
-    <td class="tg-c3ow" colspan="2">mean3<br></td>
-    <td class="tg-c3ow" colspan="2">mean4</td>
+    <td class="tg-c3ow" colspan="2">0.0020</td>
+    <td class="tg-c3ow" colspan="2">0.0015</td>
+    <td class="tg-c3ow" colspan="2">0.0030<br></td>
+    <td class="tg-c3ow" colspan="2">0.0034</td>
   </tr>
   <tr>
     <td class="tg-c3ow">std<br></td>
     <td class="tg-c3ow" colspan="2">0.0046</td>
-    <td class="tg-c3ow" colspan="2">std2</td>
-    <td class="tg-c3ow" colspan="2">std3</td>
-    <td class="tg-c3ow" colspan="2">std4</td>
+    <td class="tg-c3ow" colspan="2">0.0004</td>
+    <td class="tg-c3ow" colspan="2">0.0014</td>
+    <td class="tg-c3ow" colspan="2">0.0016</td>
   </tr>
 </tbody>
 </table>
