@@ -34,13 +34,19 @@ Once inside the virtual environment, (*Note: you are inside the virtual environm
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/generate_data_2.png" width="700">
 
 
-
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/radians.png" width="200">
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/circle_20.jpg" width="200">
+### Space state representation
 
 
+<figure>
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/radians.png" width="200">
+  <figcaption>The angle θ is defined with respect to the upright position and wrapped to the [−π,π]</figcaption>
+</figure>
 
 
+<figure>
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/circle_20.jpg" width="200">
+  <figcaption>The provided code divides θ ∈ [−π,π] into 20 discrete bins</figcaption>
+</figure>
 
 
 
