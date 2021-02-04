@@ -354,21 +354,21 @@ The model.summary() function prints useful information about the model to the te
 ## Task 1.5
 "Describe a strategy (architecture, data pre-processing, etc...) to estimate both the angle and angular velocity from images."
 
-We are given some sequential data as input, a sequence of raw image observations of the trajectories of the pendulum. A single image observation, is not enough to provide temporal information, for example, we cannot know in which direction is the pendulum going and its velocity. 
+We are given some sequential data as input, a sequence of raw image observations of the pendulum trajectories. A single image observation is not enough to provide any temporal information, for example, we cannot know in which direction is the pendulum going and its velocity. 
 The strategy I propose is a combiantion of an autoencoder + RNN (recurrent neural network).
-RNNs are able to embed 
+RNNs are able to embed past observations in their hidden state *h*. In particular I propose the use of LSTMs (Long short-term memory) which are an improved version of the simple vanilla RNN. 
+
+Because the observations are high dimensional raw images, it is necessary to reduce its dimensionality in order to use them and extract the relevant information. For this, we can use an autoencoder (encoder + latent space + decoder) to compress the important features of the image into a latent space.
+
+The output of the decoder is a prediction of the next observation, and a consequence of learning to predict this next observation, the model also learns to embed past observations in the hidden state *h* of the LSTM.
 
 
-RNNs can ecncode information from past observations in their hidden state *h*
+The following picture shows a general view of the architecture:
+
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task1.5.png" width="500">
 
-If the observations are high dimensiona (raw images) the agent also needs to learn to compress spaatial information. A common approach is to compress this information in the latent space of an autoencoder
 
-An autoencoder with an LSTM to compute the transition function, that is, predicting the next high-dimensional observation
 
-The model embeds past observations in the hidden state of an LSTM layer
-RNN , LSTM = 
-Long short-term memory 
 
 
 ---
