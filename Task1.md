@@ -351,6 +351,73 @@ The model.summary() function prints useful information about the model to the te
     - Mean = 0.002
     - Standard deviation = 0.0046
     
+## Task 1.4
+
+> ⁉️ I run 4 times model_theta with `seed_value = 0` and every time, the plot is exactly the same as in the previous run. The same happens when I changed the `seed_value = 1` 
+
+
+<figure>
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_0_run1.png" width="500">
+  <figcaption> The 4 times I run the model_theta with seed_value = 0, I get this figure.</figcaption>
+</figure>
+
+---
+
+<figure>
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_1_run1.png" width="500">
+  <figcaption> Also, the 4 times I run the model_theta with seed_value = 1, I get this figure.</figcaption>
+</figure>
+
+
+
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-baqh"></th>
+    <th class="tg-baqh" colspan="2">Run 1</th>
+    <th class="tg-baqh" colspan="2">Run 2</th>
+    <th class="tg-baqh" colspan="2">Run 3</th>
+    <th class="tg-baqh" colspan="2">Run 4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh">seed_value</td>
+    <td class="tg-baqh">mean</td>
+    <td class="tg-baqh">std</td>
+    <td class="tg-baqh">mean</td>
+    <td class="tg-baqh">std</td>
+    <td class="tg-baqh">mean</td>
+    <td class="tg-baqh">std</td>
+    <td class="tg-baqh">mean</td>
+    <td class="tg-baqh">std</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0</td>
+    <td class="tg-baqh">0.3958</td>
+    <td class="tg-baqh">0.0965</td>
+    <td class="tg-baqh">0.3958</td>
+    <td class="tg-baqh">0.0965</td>
+    <td class="tg-baqh">0.3958</td>
+    <td class="tg-baqh">0.0965</td>
+    <td class="tg-baqh">0.3958</td>
+    <td class="tg-baqh">0.0965</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1</td>
+    <td class="tg-baqh">1.5763</td>
+    <td class="tg-baqh">0.9317</td>
+    <td class="tg-baqh">1.5763</td>
+    <td class="tg-baqh">0.9317</td>
+    <td class="tg-baqh">1.5763</td>
+    <td class="tg-baqh">0.9317</td>
+    <td class="tg-baqh">1.5763</td>
+    <td class="tg-baqh">0.9317</td>
+  </tr>
+</tbody>
+</table>
+
 ## Task 1.5
 "Describe a strategy (architecture, data pre-processing, etc...) to estimate both the angle and angular velocity from images."
 
