@@ -438,19 +438,33 @@ The model.summary() function prints useful information about the model to the te
 </table>
     
 ## Task 1.4
-> ⚠️ 
+
 
 ### Task 1.4 - Evaluate
 
 Evaluate Report the mean and standard deviation of the “average prediction error” over multiple runs for both seed values. 
 - What do you observe? 
+
+  Every time I run the model, I get the same figure
 - What causes the results in all the previous questions to vary across different runs, while the underlying code and dataset remained unchanged? 
+  ⁉️
 - What is the benefit of seeding the pseudo-random generator in practice?
+  ⁉️
+  Nice explanatory video: https://www.youtube.com/embed/GtOt7EBNEwQ
+
 
 <figure>
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_0_run1.png" width="400">
   <figcaption> Every time you run the model_theta with seed_value = 0, you get the same figure.</figcaption>
 </figure>
+
+<object width="425" height="350">
+  <param name="movie" value="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg" />
+  <param name="wmode" value="transparent" />
+  <embed src="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
 
 ---
 
