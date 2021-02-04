@@ -240,6 +240,9 @@ model = tf.keras.Sequential(
 
     """TASK 1.1: END"""
 ```
+
+> ⚠️ I manually added `model.summary()`. In the `.ipynb` it is already included
+
 ### Task 1.2 - Run
 
 ```
