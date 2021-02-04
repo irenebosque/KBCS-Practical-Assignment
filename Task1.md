@@ -83,7 +83,7 @@ model = tf.keras.Sequential( #irene
 )
 ```
 ### Task 1.1 - Compile
-> ⚠️ It was intentional to already include how to compile the model? Maybe this link is useful for the compile step: https://keras.io/api/optimizers/
+> ⚠️ It was intentional to already include how to compile the model in `train.py`? I see that in the google notebook it is not included. Maybe this link is useful for the compile step: https://keras.io/api/optimizers/
 
 
 
@@ -167,7 +167,7 @@ Task 1.1  Average predicion error: 2.33e+00
 > ⚠️ In the run section maybe rewrite,  " **Manually** close the **2** generated plots to start a live simulation of your prediction model in case you run locally."
 
 
-> ⚠️ I do not understand perfectly the graph to be honest. Each bar represents one of the 20 bins in which 360 degrees are divided? Then why the X axis goes from -3pi to +3pi
+> ⚠️ To be honest, I do not perfectly understand the accuracy graph. Each bar represents one of the 20 bins in which 360 degrees are divided? Then why the X axis goes from -3pi to +3pi?
 
 ### Task 1.1 - Evaluate
 
@@ -177,11 +177,14 @@ Task 1.1  Average predicion error: 2.33e+00
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
     
 - What could be an explanation for the loss of accuracy in that region? 
-    As it can be seen in the following picture, most of the angles are found around pi or -pi. The pendulum does not get to visit regions far from that angle. Therefore, the accurary gets lower and lower for regions farther from the ones the pendulum visits the most. 
+  
+  The pendulum does not get to visit regions far from pi or -pi. Therefore, the accurary gets lower and lower for regions farther from the ones the pendulum visits the most. 
 
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
 - Also, report the mean and standard deviation of the “average prediction error” stated in the plot’s title over multiple runs
+
     Average predicion error: 2.33e+00
+    
     In order to obtain the mean and the standard deviation, I printed the following values on the terminal and used them on Excel:
     
     ```python
@@ -195,7 +198,8 @@ Task 1.1  Average predicion error: 2.33e+00
     - Standard deviation = 0.93
     
 - In general, a separate test dataset is used to evaluate a trained model, why?
-    ❎
+
+    Having 2 separate datasets helps to avoid overfitting and also it ensures that the model will generalize on data that has never seen.
 
 ## Task 1.2
 
