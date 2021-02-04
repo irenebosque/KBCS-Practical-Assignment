@@ -357,18 +357,20 @@ The model.summary() function prints useful information about the model to the te
 
 
 <figure>
-  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_0_run1.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_0_run1.png" width="400">
   <figcaption> The 4 times I run the model_theta with seed_value = 0, I get this figure.</figcaption>
 </figure>
 
 ---
 
 <figure>
-  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_1_run1.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_1_run1.png" width="400">
   <figcaption> Also, the 4 times I run the model_theta with seed_value = 1, I get this figure.</figcaption>
 </figure>
 
+---
 
+And of course, in the summary table, the means and standard deviations are the same across multiple runs:
 
 
 <table class="tg">
