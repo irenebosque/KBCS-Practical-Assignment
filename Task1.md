@@ -1,11 +1,11 @@
 
 
 ## Installation procedure
-> 💡 The folder I download with the files it is called *KBCS-assignment-main* and not *KBCS-assignment* as indicated in the `README.md` file.
+> ⚠️ The folder I download with the files it is called *KBCS-assignment-main* and not *KBCS-assignment* as indicated in the `README.md` file.
 
 I followed this tutorial for installing anaconda on Ubuntu **20.04**: https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/
 
-⚠️ Important once you finish following the instructions on the tutorial, close and open a new terminal as it is indicated at the end of the tutorial.
+Important: Once you finish following the instructions on the tutorial, close and open a new terminal as it is indicated at the end of the tutorial.
 
 
 
@@ -24,6 +24,9 @@ conda activate kbcs
 ```
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/Installation_procedure_3.png" width="700">
 
+---
+## Task 1.1
+
 Once inside the virtual environment, (*Note: you are inside the virtual environment if you see (kbcs) in front of the terminal line*), run if you wish the file `generate_data.py`, it takes some time:
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/generate_data_1.png" width="700">
@@ -35,35 +38,23 @@ Once inside the virtual environment, (*Note: you are inside the virtual environm
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/radians.png" width="200">
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/circle_20.jpg" width="200">
 
-In REAME.md, line 11, add what you mean by move into that directory. Example cd ..
-Line 27 Readme should be: irene@irene-computer:~/Dropbox/KBCS-Practical Assignment/KBCS-assignment-main$  Important: The folder is called KBCS-assignment
 
 
-Maybe include a picture of the angles of the pendulum or a more detailed description like, from upright position, going right that means positive pi...
-
-IN the Readme, in the training data sectionn "which we concatenate into a single sequence and save as a single dataset", here the word sequence, maybe put trajecory?
-
-In the train file maybe already include the header keras and layers?
-Maybe is confusing, if you add the headers then, tf.keras.layers?
-
-Maybe this link is useful for the compile step? https://keras.io/api/optimizers/
-
-It was intentional to already include how to compile the model?
-
-"Make sure that we have a train-validation split of 0.2 and a batch size of 64", add something like, this is already added in the provided train.py file
-
-In the run section, what is the meaning of "Close the generated plots to start a live simulation of your prediction model in case you run locally."
-
-Say that change model_type is around lie 63
-
-CNN
-"kernel_size 	An integer or tuple/list of 2 integers, specifying the height and width of the 2D convolution window. Can be a single integer to specify the same value for all spatial dimensions. "
 
 
-## Task 1.1
+
+
+
+
+
+
+
+
 
 
 ### Task 1.1 - Create
+
+
 
 The sequential *model_theta* can be created in one of the two following ways, like this...:
 
@@ -86,10 +77,18 @@ model = tf.keras.Sequential( #irene
 )
 ```
 ### Task 1.1 - Compile
-> 💡 It was intentional to already include how to compile the model?
+> ⚠️ It was intentional to already include how to compile the model? Maybe this link is useful for the compile step: https://keras.io/api/optimizers/
+
+
 
 
 ### Task 1.1 - Train
+In the pdf is written: *Make sure that we have a train-validation split of 0.2 and a batch size of 64*
+> ⚠️ Maybe add something like, these 2 variables are already added in the provided `train.py` file
+
+
+
+
 ```python
     """TASK 1.1: TRAIN MODEL HERE"""
 
@@ -156,7 +155,13 @@ Test loss: 5.9486284255981445
 ```
 
 
-Task 1.1  Average predicion error: <img src="https://render.githubusercontent.com/render/math?math=2.33*10^0">
+Task 1.1  Average predicion error: 2.33e+00
+
+
+> ⚠️ In the run section maybe rewrite,  " **Manually** close the **2** generated plots to start a live simulation of your prediction model in case you run locally."
+
+
+> ⚠️ I do not understand perfectly the graph to be honest. Each bar represents one of the 20 bins in which 360 degrees are divided? Then why the X axis goes from -3pi to +3pi
 
 ### Task 1.1 - Evaluate
 
@@ -277,9 +282,7 @@ Test loss: 0.010128799825906754
 ## Task 1.3
 
 
-
 ### Task 1.3 - Create
-
 
 The sequential *model_cnn* can be created in one of the two following ways, like this...:
 
