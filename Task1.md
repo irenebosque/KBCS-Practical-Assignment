@@ -52,6 +52,7 @@ Once inside the virtual environment, (*Note: you are inside the virtual environm
 
 
 
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/gif_task-1-2.gif" width="500">
 
 
 
@@ -279,16 +280,45 @@ Test loss: 0.010128799825906754
 
 
 - Why does indirectly predicting the angle improve the prediction accuracy? 
+ 
+  ⁉️ (not sure). When you predict [cos(θ), sin(θ)] instead of directly θ, the value of both outputs is alwasy going to be between [-1, 1] independetly of the number of turns of the pendulum.
 - Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle? 
-- Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+  ⁉️ (not sure)
+
+- Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
     
-    - Mean = 0.04
-    - Standard deviation = 0.022
 
+    
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">model_trig</th>
+    <th class="tg-c3ow" colspan="2">Run 1</th>
+    <th class="tg-c3ow" colspan="2">Run 2</th>
+    <th class="tg-c3ow" colspan="2">Run 3</th>
+    <th class="tg-c3ow" colspan="2">Run 4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">mean</td>
+    <td class="tg-c3ow" colspan="2">0.04</td>
+    <td class="tg-c3ow" colspan="2">mean2</td>
+    <td class="tg-c3ow" colspan="2">mean3<br></td>
+    <td class="tg-c3ow" colspan="2">mean4</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">std<br></td>
+    <td class="tg-c3ow" colspan="2">0.022</td>
+    <td class="tg-c3ow" colspan="2">std2</td>
+    <td class="tg-c3ow" colspan="2">std3</td>
+    <td class="tg-c3ow" colspan="2">std4</td>
+  </tr>
+</tbody>
+</table>
 
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/gif_task-1-2.gif" width="500">
 
 
 
@@ -360,12 +390,39 @@ Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based
 The model.summary() function prints useful information about the model to the terminal. 
 - Which model would you prefer and why? 
 - Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
-- Also, report the mean and standard deviation of the “average prediction error” over multiple runs.
+- Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_cnn_std_mean.png" width="500">
     
-    - Mean = 0.002
-    - Standard deviation = 0.0046
+
+    
+    <table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow">model_cnn</th>
+    <th class="tg-c3ow" colspan="2">Run 1</th>
+    <th class="tg-c3ow" colspan="2">Run 2</th>
+    <th class="tg-c3ow" colspan="2">Run 3</th>
+    <th class="tg-c3ow" colspan="2">Run 4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">mean</td>
+    <td class="tg-c3ow" colspan="2">0.002</td>
+    <td class="tg-c3ow" colspan="2">mean2</td>
+    <td class="tg-c3ow" colspan="2">mean3<br></td>
+    <td class="tg-c3ow" colspan="2">mean4</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow">std<br></td>
+    <td class="tg-c3ow" colspan="2">0.0046</td>
+    <td class="tg-c3ow" colspan="2">std2</td>
+    <td class="tg-c3ow" colspan="2">std3</td>
+    <td class="tg-c3ow" colspan="2">std4</td>
+  </tr>
+</tbody>
+</table>
     
 ## Task 1.4
 
