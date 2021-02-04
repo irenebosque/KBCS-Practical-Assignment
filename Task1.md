@@ -350,3 +350,31 @@ The model.summary() function prints useful information about the model to the te
     
     - Mean = 0.002
     - Standard deviation = 0.0046
+    
+## Task 1.5
+"Describe a strategy (architecture, data pre-processing, etc...) to estimate both the angle and angular velocity from images."
+
+We are given some sequential data as input, a sequence of raw image observations of the trajectories of the pendulum. A single image observation, is not enough to provide temporal information, for example, we cannot know in which direction is the pendulum going and its velocity. 
+The strategy I propose is a combiantion of an autoencoder + RNN (recurrent neural network).
+RNNs are able to embed 
+
+
+RNNs can ecncode information from past observations in their hidden state *h*
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task1.5.png" width="500">
+
+If the observations are high dimensiona (raw images) the agent also needs to learn to compress spaatial information. A common approach is to compress this information in the latent space of an autoencoder
+
+An autoencoder with an LSTM to compute the transition function, that is, predicting the next high-dimensional observation
+
+The model embeds past observations in the hidden state of an LSTM layer
+RNN , LSTM = 
+Long short-term memory 
+
+
+---
+References:
+- R. Perez-Dattari, C. Celemin, G. Franzese, J. Ruiz-del-Solar and J. Kober, "Interactive Learning of Temporal Features for Control: Shaping Policies and State Representations From Human Feedback," in IEEE Robotics & Automation Magazine, vol. 27, no. 2, pp. 46-54, June 2020, doi: 10.1109/MRA.2020.2983649.
+
+- X. Zhao, X. Han, W. Su and Z. Yan, "Time series prediction method based on Convolutional Autoencoder and LSTM," 2019 Chinese Automation Congress (CAC), Hangzhou, China, 2019, pp. 5790-5793, doi: 10.1109/CAC48633.2019.8996842.
+
+
