@@ -307,16 +307,16 @@ Test loss: 0.010128799825906754
   <tr>
     <td class="tg-c3ow">mean</td>
     <td class="tg-c3ow" colspan="2">0.04</td>
-    <td class="tg-c3ow" colspan="2">0.076</td>
-    <td class="tg-c3ow" colspan="2">mean3<br></td>
-    <td class="tg-c3ow" colspan="2">mean4</td>
+    <td class="tg-c3ow" colspan="2">0.0053</td>
+    <td class="tg-c3ow" colspan="2">0.0120<br></td>
+    <td class="tg-c3ow" colspan="2">0.7852</td>
   </tr>
   <tr>
     <td class="tg-c3ow">std<br></td>
     <td class="tg-c3ow" colspan="2">0.022</td>
-    <td class="tg-c3ow" colspan="2">0.037</td>
-    <td class="tg-c3ow" colspan="2">std3</td>
-    <td class="tg-c3ow" colspan="2">std4</td>
+    <td class="tg-c3ow" colspan="2">0.0027</td>
+    <td class="tg-c3ow" colspan="2">0.0082</td>
+    <td class="tg-c3ow" colspan="2">0.4717</td>
   </tr>
 </tbody>
 </table>
