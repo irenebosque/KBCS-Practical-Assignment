@@ -288,7 +288,9 @@ Test loss: 0.010128799825906754
 - Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
 
     Figures for the first run:
+    
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
+    
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
     
 
@@ -391,11 +393,18 @@ Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based
 
 The model.summary() function prints useful information about the model to the terminal. 
 - Which model would you prefer and why? 
+
+  ⁉️ The cnn model because it gives the best accuracy and requires the less trainable parameters. This model_cnn is the one that takes longer to run, but if computer resources are not a problem I still choosing it.
+  
 - Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
+
+  ⁉️
 - Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
     
     Figures for the first run:
+    
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
+    
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_cnn_std_mean.png" width="500">
     
 
@@ -429,7 +438,7 @@ The model.summary() function prints useful information about the model to the te
 </table>
     
 ## Task 1.4
-
+> ⚠️ Maybe explain more in the question what is the `seed_value`.
 > ⁉️ I run 4 times model_theta with `seed_value = 0` and every time, the plot is exactly the same as in the previous run. The same happens when I changed the `seed_value = 1` 
 
 
