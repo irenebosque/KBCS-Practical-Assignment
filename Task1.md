@@ -438,25 +438,30 @@ The model.summary() function prints useful information about the model to the te
 </table>
     
 ## Task 1.4
-> ⚠️ Maybe explain more in the question what is the `seed_value`.
-> ⁉️ I run 4 times model_theta with `seed_value = 0` and every time, the plot is exactly the same as in the previous run. The same happens when I changed the `seed_value = 1` 
+> ⚠️ 
 
+### Task 1.4 - Evaluate
+
+Evaluate Report the mean and standard deviation of the “average prediction error” over multiple runs for both seed values. 
+- What do you observe? 
+- What causes the results in all the previous questions to vary across different runs, while the underlying code and dataset remained unchanged? 
+- What is the benefit of seeding the pseudo-random generator in practice?
 
 <figure>
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_0_run1.png" width="400">
-  <figcaption> The 4 times I run the model_theta with seed_value = 0, I get this figure.</figcaption>
+  <figcaption> Every time you run the model_theta with seed_value = 0, you get the same figure.</figcaption>
 </figure>
 
 ---
 
 <figure>
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/seed_value_1_run1.png" width="400">
-  <figcaption> Also, the 4 times I run the model_theta with seed_value = 1, I get this figure.</figcaption>
+  <figcaption> Every time you run the model_theta with seed_value = 1, you get the same figure.</figcaption>
 </figure>
 
 ---
 
-And of course, in the summary table, the means and standard deviations are the same across multiple runs:
+The means and standard deviations are the same over multiple runs:
 
 
 <table class="tg">
