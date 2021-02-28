@@ -196,12 +196,14 @@ How can the results be different,even though the underlying code and test datase
 
 Analyze the “per bin average prediction errors” plot of a “successful” run (i.e. a run with a plot that resembles the left plot in Figure 2). 
 - **Where does this model have the lowest accuracy**?
+
     At both ends, near pi and -pi
   
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
   
 - What could be an explanation for the loss of accuracy in that region?
+
     There is a discontinuity in that area. Suddenly it goes from -pi to pi
 
 
