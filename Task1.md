@@ -175,34 +175,34 @@ Run the code multiple times and record the “average prediction error” for ea
 mean and standard deviation of the “average prediction error” over all runs.
 
 Task 1.1  Average predicion error: 
-Run  1: 2.33e+00
-Run  2: 2.00e-01
-Run  3: 2.46e-01
-Run  4: 5.13e-01
-Run  5: 2.33e+00
-Run  6: 3.23e-01
-Run  7: 2.33e+00
-Run  8: 2.30e-01
-Run  9: 2.33e+00
-Run 10: 2.57e-01
 
-**Standard deviation**: 1.0544
-**Mean**: 1.1089
+  - Run  1: 2.33e+00
+  - Run  2: 2.00e-01
+  - Run  3: 2.46e-01
+  - Run  4: 5.13e-01
+  - Run  5: 2.33e+00
+  - Run  6: 3.23e-01
+  - Run  7: 2.33e+00
+  - Run  8: 2.30e-01
+  - Run  9: 2.33e+00
+  - Run 10: 2.57e-01
 
-Notice that the results vary across different runs. Sometimes the model learns to predict with an
-“average prediction error”< 1.0, while sometimes the model does not learn anything at all. Figure 2
-shows two typical plots that qualitatively resemble both cases. How can the results be different,
-even though the underlying code and test dataset remained unchanged?
+  - **Standard deviation**: 1.0544
+  - **Mean**: 1.1089
+
+Notice that the results vary across different runs. Sometimes the model learns to predict with an “average prediction error”< 1.0, while sometimes the model does not learn anything at all. Figure 2 shows two typical plots that qualitatively resemble both cases. 
+How can the results be different,even though the underlying code and test dataset remained unchanged?
 
 
-• Analyze the “per bin average prediction errors” plot of a “successful” run (i.e. a run with a plot that
-resembles the left plot in Figure 2). **Where does this model have the lowest accuracy**? What could
-be an explanation for the loss of accuracy in that region?
-
-  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
-  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
-
-  Discontinuity?
+Analyze the “per bin average prediction errors” plot of a “successful” run (i.e. a run with a plot that resembles the left plot in Figure 2). 
+- **Where does this model have the lowest accuracy**?
+    At both ends, near pi and -pi
+  
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
+  
+- What could be an explanation for the loss of accuracy in that region?
+    There is a discontinuity in that area. Suddenly it goes from -pi to pi
 
 
 
