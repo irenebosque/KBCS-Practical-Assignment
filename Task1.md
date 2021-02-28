@@ -162,6 +162,18 @@ Test loss: 5.9486284255981445
 ```
 
 
+
+
+> ⚠️ In the run section maybe rewrite,  " **Manually** close the **2** generated plots to start a live simulation of your prediction model in case you run locally."
+
+
+> ⚠️ To be honest, I do not perfectly understand the accuracy graph. Each bar represents one of the 20 bins in which 360 degrees are divided? Then why the X axis goes from -3pi to +3pi?
+
+### Task 1.1 - Evaluate
+
+Run the code multiple times and record the “average prediction error” for each run. Calculate the
+mean and standard deviation of the “average prediction error” over all runs.
+
 Task 1.1  Average predicion error: 
 Run  1: 2.33e+00
 Run  2: 2.00e-01
@@ -177,39 +189,23 @@ Run 10: 2.57e-01
 **Standard deviation**: 1.0544
 **Mean**: 1.1089
 
+Notice that the results vary across different runs. Sometimes the model learns to predict with an
+“average prediction error”< 1.0, while sometimes the model does not learn anything at all. Figure 2
+shows two typical plots that qualitatively resemble both cases. How can the results be different,
+even though the underlying code and test dataset remained unchanged?
 
-> ⚠️ In the run section maybe rewrite,  " **Manually** close the **2** generated plots to start a live simulation of your prediction model in case you run locally."
+
+• Analyze the “per bin average prediction errors” plot of a “successful” run (i.e. a run with a plot that
+resembles the left plot in Figure 2). **Where does this model have the lowest accuracy**? What could
+be an explanation for the loss of accuracy in that region?
+
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
+
+  Discontinuity?
 
 
-> ⚠️ To be honest, I do not perfectly understand the accuracy graph. Each bar represents one of the 20 bins in which 360 degrees are divided? Then why the X axis goes from -3pi to +3pi?
 
-### Task 1.1 - Evaluate
-
-- Where does the model have the lowest accuracy? 
-    The lowest accuracy is found on both ends of the plot which represent a greater angles travelled by the pendulum. 
-    
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_theta.png" width="500">
-    
-- What could be an explanation for the loss of accuracy in that region? 
-  
-  The pendulum does not get to visit regions far from pi or -pi. Therefore, the accurary gets lower and lower for regions farther from the ones the pendulum visits the most. 
-
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum_model_theta.png" width="500">
-- Also, report the mean and standard deviation of the “average prediction error” stated in the plot’s title over multiple runs
-
-    Average predicion error: 2.33e+00
-    
-    In order to obtain the mean and the standard deviation, I printed the following values on the terminal and used them on Excel:
-    
-    ```python
-    print(bin_means) # Y axis
-    print(bins) # X axis
-    ```
-    
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_theta_std_mean.png" width="500">
-    
-    - Mean = 1.57 
-    - Standard deviation = 0.93
     
 - In general, a separate test dataset is used to evaluate a trained model, why?
 
