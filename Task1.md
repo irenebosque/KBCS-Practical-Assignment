@@ -162,7 +162,20 @@ Test loss: 5.9486284255981445
 ```
 
 
-Task 1.1  Average predicion error: 2.33e+00
+Task 1.1  Average predicion error: 
+Run  1: 2.33e+00
+Run  2: 2.00e-01
+Run  3: 2.46e-01
+Run  4: 5.13e-01
+Run  5: 2.33e+00
+Run  6: 3.23e-01
+Run  7: 2.33e+00
+Run  8: 2.30e-01
+Run  9: 2.33e+00
+Run 10: 2.57e-01
+
+**Standard deviation**: 1.0544
+**Mean**: 1.1089
 
 
 > ⚠️ In the run section maybe rewrite,  " **Manually** close the **2** generated plots to start a live simulation of your prediction model in case you run locally."
