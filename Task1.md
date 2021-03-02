@@ -514,7 +514,8 @@ In this way, other researchers will obtain exactly the same results when running
 
 
 ## Task 1.5
-"Describe a strategy (architecture, data pre-processing, etc...) to estimate both the angle and angular velocity from images."
+If our goal is to control the pendulum, the angular velocity θ̇ is generally also required. However, temporal information cannot be extracted from individual images. Describe a strategy (architecture, data pre-processing, etc...) to estimate both the angle and angular velocity from images.
+
 
 We are given some sequential data as input, a sequence of raw image observations of the pendulum trajectories. A single image observation is not enough to provide any temporal information, for example, we cannot know in which direction is the pendulum going and its velocity. 
 The strategy I propose is a combiantion of an autoencoder + RNN (recurrent neural network).
@@ -529,8 +530,30 @@ The following picture shows a general view of the architecture:
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task1.5.png" width="500">
 
+---
+
+### Another answer for 1.5
+One way to estimate the angular velocity, is by using observations that consist of a number of consecutive downsampled images. Since the observation now consists of images from consecutive time steps, the observation contains the velocity information that we would like to extract. Also, we probaly want to convert the RGB images to grey-scale images in order to reduce the dimensionality of the observation.
+A possible architecture for predicting the angle and angle velocity is the following:
+
+- The input consists of a stack of a number of consecutive downsampled grey-scale images.
+
+- Next, a convolutional layer of rectified linear units will be used with an appropriate number of
+filters and kernel sizes.
+
+- After the convolutional layer, we can add a max pooling layer to reduce the dimensionality and
+add basic translational invariance to the model.
+
+- Now we will flatten the data, since the next steps do not depend on the spatial relationship of the
+data.
+
+- Finally, the flat layer will be connected to a fully-connected linear output layer.
 
 
+It is also possible to use multiple convolutional layers of rectified linear units or to have a fully-connected layer of rectified linear units before the linear output layer. But this will increase the complexity of the model and therefore the number of trainable parameters.
+
+### Yet another concept
+If you process sequences of images and at time step _t_, the pendulum is at a certain position and at the next timestep _t+1_ it has move, it is possible from that difference to extract the velocity (angle sweep / time)
 
 
 ---
