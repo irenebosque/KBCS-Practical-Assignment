@@ -303,17 +303,20 @@ Run the code multiple times and record the “average prediction error” for ea
 Compare the “per bin average prediction error” plot for Mtrig with the plot for Mθ. 
 Why does indirectly predicting the angle improve the prediction accuracy?
 
-| Model   | Prediction accuracy |
+| Model   | mean average prediction error |
 | ------------- |:-------------:      | 
-| Mθ            | 2.33e+00            | 
-| Mtrig         | 4.33e-02            |
+| Mθ            | 1.108            | 
+| Mtrig         | 0.023           |
 
+
+The results for indirectly predicting the angles with cos(θ) and sin(θ) are better in terms of the average prediction error, because there is now a continuous relationship between the angle of the pendulum and the target values of the model. Therefore, the model generalizes the results in the region around −π and
+π better.
 
 
  Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle?
 
 
-
+because sin(−θ) = sin(θ).
     
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/same_sin.png" width="500">
     
