@@ -283,10 +283,20 @@ Test loss: 0.010128799825906754
 
 - Compare the average prediction error per bin and compare with the plot for Mθ.
 
-| Model         | Average prediction error |
-| ------------- |:-------------:      |
-| Mθ            | 2.33e+00            | 
-| Mtrig         | 4.33e-02            |   
+  - Run  1: 2.16e-02
+  - Run  2: 1.32e-02
+  - Run  3: 1.05e-01
+  - Run  4: 1.08e-02
+  - Run  5: 6.00e-03
+  - Run  6: 9.16e-03
+  - Run  7: 3.01e-02
+  - Run  8: 4.67e-03
+  - Run  9: 2.23e-02
+  - Run 10: 1.35e-02
+
+  - **Standard deviation**: 0.0297
+  - **Mean**: 0.0236
+
 
 
 
@@ -302,7 +312,7 @@ Test loss: 0.010128799825906754
     
     <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
     
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_trig_std_mean.png" width="500">
+
     
 
     
