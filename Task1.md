@@ -281,7 +281,10 @@ Test loss: 0.010128799825906754
 ```
 ### Task 1.2 - Evaluate
 
-- Compare the average prediction error per bin and compare with the plot for Mθ.
+Run the code multiple times and record the “average prediction error” for each run. Calculate the mean and standard deviation of the “average prediction error” over all runs.
+
+    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
+    
 
   - Run  1: 2.16e-02
   - Run  2: 1.32e-02
@@ -297,52 +300,27 @@ Test loss: 0.010128799825906754
   - **Standard deviation**: 0.0297
   - **Mean**: 0.0236
 
+Compare the “per bin average prediction error” plot for Mtrig with the plot for Mθ. 
+Why does indirectly predicting the angle improve the prediction accuracy?
+
+| Model   | Prediction accuracy |
+| ------------- |:-------------:      | 
+| Mθ            | 2.33e+00            | 
+| Mtrig         | 4.33e-02            |
 
 
 
-- Why does indirectly predicting the angle improve the prediction accuracy? 
- 
-  ⁉️ (not sure). When you predict [cos(θ), sin(θ)] instead of directly θ, the value of both outputs is alwasy going to be between [-1, 1] independetly of the number of turns of the pendulum.
-- Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle? 
-  ⁉️ (not sure)
+ Why is it not sufficient to predict only sin(θ) and use its inverse θ = arcsin(sin(θ)) to get an estimate of the angle?
 
-- Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
 
-    Figures for the first run:
-    
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_trig.png" width="500">
-    
 
     
 
     
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-c3ow">model_trig</th>
-    <th class="tg-c3ow" colspan="2">Run 1</th>
-    <th class="tg-c3ow" colspan="2">Run 2</th>
-    <th class="tg-c3ow" colspan="2">Run 3</th>
-    <th class="tg-c3ow" colspan="2">Run 4</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-c3ow">mean</td>
-    <td class="tg-c3ow" colspan="2">0.04</td>
-    <td class="tg-c3ow" colspan="2">0.0053</td>
-    <td class="tg-c3ow" colspan="2">0.0120<br></td>
-    <td class="tg-c3ow" colspan="2">0.7852</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">std<br></td>
-    <td class="tg-c3ow" colspan="2">0.022</td>
-    <td class="tg-c3ow" colspan="2">0.0027</td>
-    <td class="tg-c3ow" colspan="2">0.0082</td>
-    <td class="tg-c3ow" colspan="2">0.4717</td>
-  </tr>
-</tbody>
-</table>
+
+    
+    
+
 
 
 
