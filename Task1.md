@@ -315,7 +315,7 @@ Why does indirectly predicting the angle improve the prediction accuracy?
 
 
     
-
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/same_sin.png" width="500">
     
 
     
