@@ -382,6 +382,22 @@ Test loss: 1.965910632861778e-05
 ```
 ### Task 1.3 - Evaluate
 
+Run the code multiple times and record the “average prediction error” for each run. Calculate the mean and standard deviation of the “average prediction error” over all runs
+
+  - Run  1: 4.13e-03
+  - Run  2: 2.76e-03
+  - Run  3: 4.78e-03 
+  - Run  4: 5.64e-03  
+  - Run  5: 1.69e-03 
+  - Run  6: 2.97e-03 
+  - Run  7: 2.53e-03 
+  - Run  8: 5.87e-03 
+  - Run  9: 4.59e-03 
+  - Run 10: 1.00e-03 
+
+  - **Standard deviation**: 0.0017
+  - **Mean**: 0.0036
+
 
 
 Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based on the the prediction accuracy on the test dataset and the number of trainable parameters. 
@@ -389,56 +405,22 @@ Evaluate Make a comparison of the different models (i.e. Mθ, Mtrig, Mcnn) based
 
 | Model   | Prediction accuracy | Trainable parameters  |
 | ------------- |:-------------:      | -----:|
-| Mθ            | 2.33e+00            | 301,313   |
-| Mtrig         | 4.33e-02            |   301,442 |
-| Mcnn          | 4.74e-03            |    11,714 |
+| Mθ            | 1.108             | 301,313   |
+| Mtrig         | 0.023           |   301,442 |
+| Mcnn          | 0.0036            |    11,714 |
 
 The model.summary() function prints useful information about the model to the terminal. 
 - Which model would you prefer and why? 
 
-  ⁉️ The cnn model because it gives the best accuracy and requires the less trainable parameters. This model_cnn is the one that takes longer to run, but if computer resources are not a problem I still choosing it.
+  Answer: The cnn model because it gives the best accuracy and requires the less trainable parameters. This model_cnn is the one that takes longer to run, but if computer resources are not a problem I still choosing it.
   
-- Why does the prediction accuracy of the model completely deteriorate when you change the activation of the last fully connected layer to ReLU? 
-
-  ⁉️
-- Also, report the mean and standard deviation of the “average prediction error” over **multiple runs**.
-    
-    Figures for the first run:
-    
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/average_error_model_cnn.png" width="500">
-    
-    <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/model_cnn_std_mean.png" width="500">
+  If you change the activation of the last fully connected layer to ReLU, the prediction accuracy completely deteriorates. Why?
+  
+  Because RELU activation function doesn't let negative values, and therefore we are not able to predict negative sin and negative cos with this activation function
+  
+      <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/relu.png" width="500">
     
 
-    
-    <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-c3ow">model_cnn</th>
-    <th class="tg-c3ow" colspan="2">Run 1</th>
-    <th class="tg-c3ow" colspan="2">Run 2</th>
-    <th class="tg-c3ow" colspan="2">Run 3</th>
-    <th class="tg-c3ow" colspan="2">Run 4</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-c3ow">mean</td>
-    <td class="tg-c3ow" colspan="2">0.0020</td>
-    <td class="tg-c3ow" colspan="2">0.0015</td>
-    <td class="tg-c3ow" colspan="2">0.0030<br></td>
-    <td class="tg-c3ow" colspan="2">0.0034</td>
-  </tr>
-  <tr>
-    <td class="tg-c3ow">std<br></td>
-    <td class="tg-c3ow" colspan="2">0.0046</td>
-    <td class="tg-c3ow" colspan="2">0.0004</td>
-    <td class="tg-c3ow" colspan="2">0.0014</td>
-    <td class="tg-c3ow" colspan="2">0.0016</td>
-  </tr>
-</tbody>
-</table>
-    
 ## Task 1.4
 
 
