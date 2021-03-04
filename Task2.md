@@ -92,3 +92,20 @@ Output argument "Q" (and maybe others) not assigned during call to "swingup>init
 Error in assignment_verify (line 35)
 Q = learner.init_Q(par);
 ```
+
+## Task 2.3. Initialization
+The **initial values in your Q table** can be very important for the exploration behavior, and there are therefore many ways of initializing them (see S&B, Section 2.7). This is done in the init_Q function. ⚠️ Answer is in chapter 2.6
+
+a) Pick a method and give a short argumentation for your choice.
+Choose “optimistic initial values” strategy. Setting initial value +5 will encourage exploration even if a greedy method is used. Random initialization is also possible.
+
+b) Implement your choice. The Q table should be of size N × M × O, where N is the number of position states, M is the number of velocity states, and O is the number of actions.
+
+In file **swingup.m** in line 129:
+
+```matlab
+function Q = init_Q(par)
+    % TODO: Initialize the Q table.
+    Q = ones(par.pos_states, par.vel_states, par.actions) * 5;
+end
+```
