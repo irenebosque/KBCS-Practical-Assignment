@@ -213,3 +213,112 @@ end
 
 Run assignment_verify, and verify that your termination criterion is correct.
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.5-c.png" width="600">
+
+## Task 2.6. The policy and learning update 
+
+It is time to implement the **action selection** algorithm in **execute_policy**. See S&B, Sections 2.2 and 6.4. 
+
+a) Implement the **greedy action selection** algorithm.
+See next question b
+
+b) Modify the chosen action according to the ε-greedy policy. Hint: use the rand and randi functions.
+```matlab
+function a = execute_policy(Q, s, par)
+    % TODO: Select an action for state s using the
+    % TODO: epsilon-greedy algorithm.
+    if ( par.epsilon >= rand() )
+        a = randi([1, par.actions]);
+    else
+        [~, a] = max(Q(s(1), s(2), :));
+    
+    end
+   
+end
+```
+This [~, a] = max(Q(s(1), s(2), :)); means that If you go to table Q at position s(1), s(5) there are 5 possible Q values each for each action. Choose the max value 
+
+c) Finally, implement the SARSA update rule in update_Q.
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/sarsa.png" width="600">
+
+```matlab
+function Q = update_Q(Q, s, a, r, sP, aP, par)
+    % TODO: Implement the SARSA update rule.
+        Q(s(1),s(2),a) = Q(s(1),s(2),a) + par.alpha*(r+par.gamma*Q(sP(1),sP(2),aP)-Q(s(1),s(2),a));
+end
+```
+
+Run assignment_verify a final time to check for errors. The result should be similar to Figure 4.
+
+See fig task 2.5 c
+
+## Task 2.7. Make it work 
+Finally, use Figure 6.9 from S&B and complete all the code of the **learning section** in swingup (initializations of outer and inner loops, calculation of torque, learning and termination). Basically you need to call all functions prepared in Tasks 3.3-3.6 in a right order. Also make sure that initial state is always slightly perturbed, i.e., that swingup_initial_state.m is used for initialization. 
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/sarsa-algorithm.png" width="600">
+
+In file **swingup.m**:
+```matlab
+       % TODO: Initialize the outer loop
+       Q = init_Q(par);
+```
+...
+```matlab
+            % TODO: Initialize the inner loop
+            x = swingup_initial_state();
+            s = discretize_state(x, par);
+            a = execute_policy(Q, s, par);
+```
+...
+```matlab
+                % TODO: obtain torque
+                u = max(min(take_action(a, par), par.maxtorque), -par.maxtorque);
+```
+...
+```matlab
+                % TODO: learn
+                % use s for discretized state
+                sP = discretize_state(x, par);
+                reward = observe_reward(a, sP, par);
+                aP = execute_policy(Q, sP, par);
+                Q = update_Q(Q, s, a, reward, sP, aP, par);
+
+                % Back up state and action
+                s = sP;
+                a = aP;
+```
+...
+```matlab
+                % TODO: check termination condition
+                if is_terminal(s, par)
+                    break
+                end
+```
+
+It is time to see how your learning algorithm behaves! Run assignment.m and check the progress. A successful run looks somewhat like Figure 5. 
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.7.png" width="600">
+
+a) How many simulations steps on average does a swing-up take (after learning has finished)? Will it be wise to reduce the number of steps per trial during learning?
+```matlab
+                % TODO: check termination condition
+                if is_terminal(s, par)
+                    tt_Array = [tt_Array, tt];
+                    break
+                end
+                ...
+                ...
+                display(mean(tt_Array))            
+```
+I get 67 timesteps on average
+Professor: About 50 which is quite less then a length of one trial (which is 200).
+
+b) Large parts of the policy in the upper-right graph are quite noisy. What reasons can you name?
+
+Optimization has not converged yet, not all states were visited.
+
+c) Test your code with greedy and ε-greedy policies. Which method allows the algorithm to converge faster and which method results in a higher cumulative reward (on average)? Explain the reason
+
+ε-greedy results in higher cumulative reward, but greedy converges faster
+
+d) Try several values of discount rate, spanned across the [0,1] interval. What discount rate allows the algorithm to converge faster? Explain the reason.
+
+Learning process slowed down because with smaller discount rate the agent tried to maximize immediate rewards MORE then future rewards.
