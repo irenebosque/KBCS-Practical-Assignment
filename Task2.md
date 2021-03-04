@@ -142,3 +142,23 @@ function s = discretize_state(x, par)
     s(2) = min(max(s(2),1),par.vel_states);
 end
 ```
+c) What would happen if we clip the velocity range too soon, say at [−2π,2π] rads−1?
+Higher velocities would not be reachable and thus pendulum might not be able to reach the top position.
+
+Now you need to specify how the actions are turned into torque values, in the take_action function. 
+
+d) The allowable torque is in the range [−par.maxtorque,par.maxtorque]. Distribute the actions uniformly over this range. This means that zero torque will be in the middle of the range. 
+```matlab
+function u = take_action(a, par)
+    % TODO: Calculate the proper torque for action a. This cannot
+    % TODO: exceed par.maxtorque.
+    min_a = 1;
+    max_a = par.actions;
+    med_a = (max_a + min_a) / 2;
+    u = par.maxtorque * (a - med_a)/(max_a - med_a);
+end
+```
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_action.jpeg" width="700">
+
+
+Run assignment_verify, and look at the plots of continuous vs. discretized position. Are they what you would expect?
