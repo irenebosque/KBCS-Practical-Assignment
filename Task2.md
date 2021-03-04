@@ -175,3 +175,24 @@ Sanity checking robot_learning_control
 ...Action execution is within bounds
 ```
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.4-d.png" width="600">
+
+## Task 2.5. Reward and termination
+Now you should determine the reward function, which is implemented in **observe_reward**. 
+
+a) What is the simplest reward function that you can devise, given that we want the system to balance the pendulum at the top? 
+
+The most simple reward function is to give **0 reward** for **all states except** for the **target state** where reward is a constant number. The pendulum is in the upright position when **angle** is **pi** and **velocity** is **0**. This results in the single point reward in the middle of state space.
+
+b) Implement observe_reward.
+```matlab
+function r = observe_reward(a, sP, par)
+    % TODO: Calculate the reward for taking action a,
+    % TODO: resulting in state sP.
+    if (sP == [ceil(par.pos_states/2) ceil(par.vel_states/2)]) %ceil for odd nb of states
+        r = 10;
+    else
+        r = 0;
+    end
+end
+```
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.5-b.png" width="600">
