@@ -158,7 +158,20 @@ function u = take_action(a, par)
     u = par.maxtorque * (a - med_a)/(max_a - med_a);
 end
 ```
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_action.jpeg" width="700">
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_action.jpeg" width="600">
 
 
 Run assignment_verify, and look at the plots of continuous vs. discretized position. Are they what you would expect?
+
+I get this message:
+```
+>> assignment_verify
+Sanity checking robot_learning_control
+...Parameters are within bounds
+...Q value dimensionality OK
+...State discretization is implemented
+......Position discretization is within bounds
+......Velocity discretization is within bounds
+...Action execution is within bounds
+```
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.4-d.png" width="600">
