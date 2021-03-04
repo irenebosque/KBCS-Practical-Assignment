@@ -196,3 +196,20 @@ function r = observe_reward(a, sP, par)
 end
 ```
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.5-b.png" width="600">
+
+You also need to specify when a trial is finished. While we could learn to continually balance the pendulum, in this exercise we will only learn to swing up into a balanced state. The trial can therefore be ended when that goal state is reached. 
+
+c) Implement **is_terminal**. 
+```matlab
+function t = is_terminal(sP, par)
+    % TODO: Return 1 if state sP is terminal, 0 otherwise.
+         if (sP == [ceil(par.pos_states/2) ceil(par.vel_states/2)])
+        t = 1; %terminate because we reached the terminal state
+    else
+        t = 0; 
+    end
+end
+```
+
+Run assignment_verify, and verify that your termination criterion is correct.
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/task2.5-c.png" width="600">
