@@ -120,9 +120,25 @@ s = learner.discretize_state(x0, par);
 ```
 ## Task 2.4. Discretization 
 In Task 3.2 (2.2)⚠️, you determined the amount of position and velocity states that your Q table can hold, and the amount of actions the agent can choose from. The state discretization is done in the **discretize_state function**. 
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum.png" width="700">
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum.png" width="400">
 
 a) Implement the position discretization. The input may be outside the interval [0,2π] rad, so be sure to wrap the state around (hint: use the mod function). The resulting state must be in the range [1, par.pos_states]. This means that π rad (the “up” direction) will be in the middle of the range. See the pendulum model shown in Figure 3.
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_position.jpeg" width="700">
 _Y = ceil(X)_ rounds each element of X to the **nearest integer** greater than or equal to that element.
+
+b) Implement the velocity discretization. Even though we assume that the values will not exceed the range [−5π,5π] rads−1, they must be clipped to that range to avoid errors. The resulting state must be in the range [1,par.vel_states]. This means that zero velocity will be in the middle of the range.
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_velocity.jpeg" width="700">
+
+In file **swingup.m** line 134:
+```matlab
+function s = discretize_state(x, par)
+    % TODO: Discretize state. Note: s(1) should be position, s(2) velocity.
+
+    s(1) = round((x(1)-pi)/(2*pi/par.pos_states)) + ceil(par.pos_states/2);
+    s(1) = mod(s(1)-1,par.pos_states)+1;
+    
+    s(2) = round(x(2)/(10*pi/par.vel_states)) + ceil(par.vel_states/2);
+    s(2) = min(max(s(2),1),par.vel_states);
+end
+```
