@@ -109,3 +109,20 @@ function Q = init_Q(par)
     Q = ones(par.pos_states, par.vel_states, par.actions) * 5;
 end
 ```
+Run assignment_verify to find obvious mistakes.
+
+Now the error is:
+```
+Output argument "s" (and maybe others) not assigned during call to "swingup>discretize_state".
+
+Error in assignment_verify (line 52)
+s = learner.discretize_state(x0, par);
+```
+## Task 2.4. Discretization 
+In Task 3.2 (2.2)⚠️, you determined the amount of position and velocity states that your Q table can hold, and the amount of actions the agent can choose from. The state discretization is done in the **discretize_state function**. 
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/pendulum.png" width="700">
+
+a) Implement the position discretization. The input may be outside the interval [0,2π] rad, so be sure to wrap the state around (hint: use the mod function). The resulting state must be in the range [1, par.pos_states]. This means that π rad (the “up” direction) will be in the middle of the range. See the pendulum model shown in Figure 3.
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/discretize_position.jpeg" width="700">
+_Y = ceil(X)_ rounds each element of X to the **nearest integer** greater than or equal to that element.
