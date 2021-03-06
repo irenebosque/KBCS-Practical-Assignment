@@ -27,6 +27,19 @@ With the nominal gains Kp = [2000 2000] and Kd = [100 100] RMSEx = 0.1672.
 
 3. controller_1 and controller_2 use a model-based control approach (with the perfect analytical model). Note that the PD gains are a lot lower. There are subtle differences in how the model is used. 
 
+First is important to know the meaning of these to investigate the code:
+```matlab
+% tau - torques applied to joints
+% th - positions of the joints (angles)
+% th_d - velocities of the joints (angular velocity)
+% th_dd - acceleration of the joints
+% _des - desired values (reference)
+% _curr - current values (measured)
+% ff_ - feedforward
+% fb_ - feedback
+```
+ <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/robot.png" width="500">
+
 - Which control structures discussed in the lectures do they correspond to? 
 
   controller_1 is an open-loop **feedback** controller with an additional low-gain PD controller:
