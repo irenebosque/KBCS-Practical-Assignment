@@ -87,4 +87,11 @@ Also this control scheme contains the reference-shaping filter.
 
 
 
+# Task 3.2. Design your own Controller
+The goal is to **replace** the analytical model in the feedforward part by a **data-driven model** (GP, **neural network**, fuzzy system, basis functions, etc.) or a qualitative one (naïve physics, knowledge-based, etc.). That is, you cannot make use of the physical equations and values of the analytical model. With feedback gains of Kp = [500; 500]; Kd = [50; 50]; your model needs to get a **lower RMSE than the pure PD controller** as defined in controller_0; and all that for a range of the rotational velocity **tp.w** between 70 and 80, also see controller_yours.m and controller_yours_evaluate.m For this evaluation only the feedforward model ff_yours.m can be modified (its **input parameters** are the **current joint position and velocity**, as well as the desired joint position, velocity and acceleration, not the current joint acceleration), the rest of the code (besides loading the model, variables, etc. and passing them to ff_yours) should remain functionally unchanged. For collecting data, training the model, etc. you can modify more things. You can use any toolboxes you like, however, controller_yours_evaluate.m needs to be directly run-able on a standard TUD installation (https://weblogin.tudelft.nl) after unzipping.
 
+
+---
+
+Task 3.3. Bonus Points
+You can get full points for the assignment without this task. With this task you can get bonus points to make up for points you missed, the maximum grade is still a 10. You can get up to 10 points for this task plus an additional bonus if your group is among the **top 10 RMSE x scores** (lowest RMSE of all groups gets 10 points, second lowest 9 points, etc. until tenth place 1 point). The task is to make your controller **robust to additional variations in the initial joint positions** (we will evaluate a secret test set with deviations of up to ±30 deg per joint compared to the desired initial position).
