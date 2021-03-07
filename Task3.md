@@ -50,12 +50,12 @@ First is important to know the meaning of these to investigate the code:
   
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/feedforward.png" width="500">
   
-**- Switch off the feedback (PD) in both controllers. What happens? **
+**- Switch off the feedback (PD) in both controllers. What happens?**
 
  The model in a typical open-loop feedforward controller here is “incorported” in the reference. 
 Setting Kp and Kd to 0 results in purely open-loop control. controller_1 then is still stable, the error is accumulating over time. controller_2 very quickly becomes totally unstable. 
 
-**- Set the initial position to the desired initial position for both controllers. What happens? **
+**- Set the initial position to the desired initial position for both controllers. What happens?**
  
  If we set the initial position to the desired initial position, the error in controller_1 reduces quite a bit (but still keeps accumulating over time), controller_2 takes a little bit longer to become totally unstable. 
 
