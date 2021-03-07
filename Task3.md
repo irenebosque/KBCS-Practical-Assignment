@@ -50,9 +50,19 @@ First is important to know the meaning of these to investigate the code:
   
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/feedforward.png" width="500">
   
-- Switch off the feedback (PD) in both controllers. What happens? 
-- Set the initial position to the desired initial position for both controllers. What happens? 
-- Do the effects of switching off the feedback and setting the initial position correspond to the properties of the controllers discussed in the lecture?
+**- Switch off the feedback (PD) in both controllers. What happens? **
+
+ The model in a typical open-loop feedforward controller here is “incorported” in the reference. 
+Setting Kp and Kd to 0 results in purely open-loop control. controller_1 then is still stable, the error is accumulating over time. controller_2 very quickly becomes totally unstable. 
+
+**- Set the initial position to the desired initial position for both controllers. What happens? **
+ 
+ If we set the initial position to the desired initial position, the error in controller_1 reduces quite a bit (but still keeps accumulating over time), controller_2 takes a little bit longer to become totally unstable. 
+
+**- Do the effects of switching off the feedback and setting the initial position correspond to the properties of the controllers discussed in the lecture?**
+
+ According to the lectures the open-loop feedback should be more unstable, here it is the other way around. Open-loop feedforward should be stable if the system is stable, hence the system is apparently not stable. Whether open-loop feedback can cope better with disturbances is hard to say as the open-loop feedforward is so unstable.
+
 
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/CodeCogsEqn.png" width="500">
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/robot_model.png" width="500">
@@ -72,3 +82,9 @@ of the controller. Thisvcan improve the prediction accuracy and eliminate offset
 Also this control scheme contains the reference-shaping filter.
 
 <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedforward.png" width="500">
+
+---
+
+
+
+
