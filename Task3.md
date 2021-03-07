@@ -54,3 +54,6 @@ First is important to know the meaning of these to investigate the code:
 - Set the initial position to the desired initial position for both controllers. What happens? 
 - Do the effects of switching off the feedback and setting the initial position correspond to the properties of the controllers discussed in the lecture?
 
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/CodeCogsEqn.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/robot_model.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/feedback_part.png" width="500">
