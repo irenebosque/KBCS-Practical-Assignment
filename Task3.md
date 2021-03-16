@@ -73,15 +73,16 @@ The state x(k) of the inverse model (9.2) is updated using the output of the mod
 Besides the model and the controller, the control scheme contains a reference-shaping filter.
 This is usually a first-order or a second-order reference model, whose task is to generate the desired dynamics and to avoid peaks in the control action for step-like references.
 
-  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedback.png" width="500">
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedforward.png" width="500">
+
   
 ## 9.1.2. Open-Loop Feedback Control
 The input x(k) of the inverse model (9.2) is updated using the output of the process itself, see Figure 9.2. The controller, in fact, operates in an open loop (does not use the error between the reference and the process output), but the current output y(k)
 of the process is used at each sample to update the internal statevx(k)
 of the controller. Thisvcan improve the prediction accuracy and eliminate offsets. At the same time, however, the direct updating of the model state may not be desirable in the presence of noise or a significant model–plant mismatch, in which cases it can cause oscillations or instability.
 Also this control scheme contains the reference-shaping filter.
-
-<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedforward.png" width="500">
+  <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedback.png" width="500">
 
 ---
 
