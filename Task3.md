@@ -68,6 +68,14 @@ Setting Kp and Kd to 0 results in purely open-loop control. controller_1 then is
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/robot_model.png" width="500">
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/feedback_part.png" width="500">
   
+---
+
+- x(k) = plant state (mathematical state of a dynamical system) at **time k**
+- u(k) = plant input
+- y(k) = plant output
+
+
+  
 ## 9.1.1. Open-Loop Feedforward Control
 The state x(k) of the inverse model (9.2) is updated using the output of the model (9.1), see Figure 9.1. As no feedback from the process output is used, stable control is guaranteed for open-loop stable, minimum-phase systems. However, a model-plant mismatch or a disturbance d will cause a steady-state error at the process output. This error can be compensated by some kind of feedback, using, for instance, the IMC scheme presented in Section 9.1.5.
 Besides the model and the controller, the control scheme contains a reference-shaping filter.
