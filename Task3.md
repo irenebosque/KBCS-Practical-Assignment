@@ -83,6 +83,8 @@ of the process is used at each sample to update the internal statevx(k)
 of the controller. Thisvcan improve the prediction accuracy and eliminate offsets. At the same time, however, the direct updating of the model state may not be desirable in the presence of noise or a significant model–plant mismatch, in which cases it can cause oscillations or instability.
 Also this control scheme contains the reference-shaping filter.
   <img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/open_loop_feedback.png" width="500">
+  
+Example: You want that a robotic arm follows a track of angles **r**. You have an inverse model that represents the robot. You feed that inverse model with the desired trayectory and it outputs the torques needed to achieve those angles. Then you input those torques to the real robot arm and you observe the real angles that those torques produce in the real physical robot. 
 
 ---
 
