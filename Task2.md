@@ -10,7 +10,20 @@ Once in that directory do:
 
 ```
 ---
+## Book
+⚠️ Careful! it has to be the **first** version of the book
+
+---
 ## Task 2.1: Understanding the code
+Read assignment.m and swingup.m. Note how the swingup function can be used it three settings: 
+
+- learning, 
+- testing and 
+- verification. 
+
+Compare the structure of the learning part to Figure 6.9 from the textbook
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/figure6-9.png" width="700">
 
 a) How many simulation steps are executed in a trial?
 
@@ -94,7 +107,9 @@ Q = learner.init_Q(par);
 ```
 
 ## Task 2.3. Initialization
-The **initial values in your Q table** can be very important for the exploration behavior, and there are therefore many ways of initializing them (see S&B, Section 2.7). This is done in the init_Q function. ⚠️ Answer is in chapter 2.6
+The **initial values in your Q table** can be very important for the exploration behavior, and there are therefore many ways of initializing them (see S&B, Section 2.7). This is done in the init_Q function. 
+
+<img src="https://github.com/irenebosque/KBCS-Practical-Assignment/blob/main/images/section2.7.png" width="700">
 
 a) Pick a method and give a short argumentation for your choice.
 Choose “optimistic initial values” strategy. Setting initial value +5 will encourage exploration even if a greedy method is used. Random initialization is also possible.
